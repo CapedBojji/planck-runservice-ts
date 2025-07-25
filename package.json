@@ -1,6 +1,6 @@
 {
   "name": "@rbxts/planck-runservice",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Roblox RunService integration for Planck scheduler providing Heartbeat, Stepped, and RenderStepped phases",
   "author": "yetanotherclown",
   "main": "out/init.lua",
