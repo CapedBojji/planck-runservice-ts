@@ -1,0 +1,44 @@
+{
+  "name": "@rbxts/planck-runservice",
+  "version": "1.0.1",
+  "description": "Roblox RunService integration for Planck scheduler providing Heartbeat, Stepped, and RenderStepped phases",
+  "author": "yetanotherclown",
+  "main": "out/init.lua",
+  "scripts": {
+    "install-dependencies": "bun install && (cd tests && bun install)",
+    "build": "rbxtsc",
+    "dev": "bun run build -- -w",
+    "prepublishOnly": "bun test",
+    "test": "bun run build && bun run build -- -p tests && rojo build tests -o tests/test-environment.rbxl && lune run tests tests/test-environment.rbxl"
+  },
+  "keywords": [
+    "roblox",
+    "rbxts",
+    "planck",
+    "runservice",
+    "scheduler",
+    "phases"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yetanotherclown/planck.git"
+  },
+  "license": "ISC",
+  "types": "out/index.d.ts",
+  "files": [
+    "out",
+    "!**/*.tsbuildinfo"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@rbxts/compiler-types": "^3.0.0-types.0",
+    "@rbxts/types": "^1.0.813",
+    "roblox-ts": "npm:@wad4444/roblox-ts@^1.0.2",
+    "typescript": "^5.5.3"
+  },
+  "dependencies": {
+    "@rbxts/planck": "^1.0.0"
+  }
+}
